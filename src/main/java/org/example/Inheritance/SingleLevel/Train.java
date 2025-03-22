@@ -6,20 +6,19 @@ class Train extends Vehicle {
     int seats;
     String wheelType;
 
-    Train(int seats, String wheelType){
-        this.seats=seats;
-        this.wheelType=wheelType;
+    public Train(String type, int wheels, String color, boolean validVehicle, int seats, String wheelType) {
+        super(type, wheels, color, validVehicle);
+        this.seats = seats;
+        this.wheelType = wheelType;
     }
-    Train(){
-        super();
-    }
+
+
     void displayTrainDetails(){
         System.out.println("Type of Vehicle is "+type+" and it's seat capacity is "+seats+" it's wheel type is "+wheelType+" with color "+color+" and i think it's a vehicle do you agree "+validVehicle);
     }
     public static void main(String[] args) {
-        Vehicle obj1 = new Vehicle("Train", 1000, "White and Blue", true);
-        Train obj2 = new Train(5000, "Metal");
-        System.out.println("Vehicle details as below : ");
-        obj2.displayTrainDetails();
+        Train obj = new Train("Malgadi", 100, "Copper", true, 10000, "Metal");
+        obj.displayTrainDetails();
+        obj.vehicletype();
     }
 }

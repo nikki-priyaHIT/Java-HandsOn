@@ -12,12 +12,7 @@ abstract class Vehicles {
         this.vehicleType = vehicleType;
     }
 
-    Vehicles(){
-
-    }
-
-    void displayVehicleType(){
-    }
+    abstract void displayVehicleType();
 
     void speed(){
         System.out.println("Speed is : 100 km/h");

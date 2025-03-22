@@ -5,8 +5,8 @@ class Car extends Vehicles {
     String carName;
     int seatCapacity;
 
-    public Car(String carType, String carName, int seatCapacity) {
-        super();
+    public Car(String carType, String carName, int seatCapacity, int wheel, String wheelType, String vehicleType) {
+        super(wheel, wheelType, vehicleType);
         this.carType = carType;
         this.carName = carName;
         this.seatCapacity = seatCapacity;
@@ -16,7 +16,7 @@ class Car extends Vehicles {
             System.out.println("Car type is : "+carType+" and it's name is : "+carName+". It's seat capacity is : "+seatCapacity);
     }
     public static void main(String[] args) {
-        Car obj = new Car("Sedan" , "Tata Avinya", 7);
+        Car obj = new Car("Sedan" , "Tata Avinya", 7, 4, "Rubber", "Car");
         obj.displayVehicleType();
         obj.speed();
 

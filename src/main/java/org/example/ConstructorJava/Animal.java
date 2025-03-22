@@ -13,10 +13,6 @@ public class Animal {
         this.color=color;
     }
 
-    public Animal() {
-
-    }
-
     @Override
     public String toString() {
         return "Animal{" +
@@ -29,8 +25,7 @@ public class Animal {
 
     public static void main(String[] args) {
         Animal obj = new Animal(4, "Dog", "Tommy", "black");
-        System.out.println("Here's the details of Animal = "+ obj.toString());
-
+        System.out.println("Here's the details of Animal = "+ obj); // by default reference of any object calls toString();
     }
 }
 

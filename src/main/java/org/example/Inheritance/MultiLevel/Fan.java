@@ -9,10 +9,6 @@ public class Fan {
         this.fanHand = fanHand;
     }
 
-    Fan(){
-
-    }
-
     void displayFan(){
         System.out.println("Fan Type is : "+fanType);
     }

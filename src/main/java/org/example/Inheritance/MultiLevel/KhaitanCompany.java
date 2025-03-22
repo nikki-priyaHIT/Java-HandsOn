@@ -5,15 +5,11 @@ public class KhaitanCompany extends FanCompany {
     int electricityConsumption;
     String productType;
 
-    KhaitanCompany(String companyName, String fanType, int price, int productPrice, int electricityConsumption, String productType) {
-        super(companyName, fanType, price);
+    KhaitanCompany(String companyName, String fanType, int price, int productPrice, int electricityConsumption, String productType, int fanHand) {
+        super(companyName, fanType, price, fanHand);
         this.productPrice = productPrice;
         this.electricityConsumption = electricityConsumption;
         this.productType = productType;
-    }
-
-    KhaitanCompany() {
-        super();
     }
 
     void displayKhaitan() {
@@ -21,15 +17,9 @@ public class KhaitanCompany extends FanCompany {
     }
 
     public static void main(String[] args) {
-
-        FanCompany obj = new KhaitanCompany("Khaitan", "Stand Fan", 1500, 1500, 1200, "Stand Fan");
-        Fan obj1 = new FanCompany("Khaitan", "Hand Fan", 2500);
-        KhaitanCompany obj2 = new KhaitanCompany("Khaitan", "Remote Fan", 2000, 2000, 450, "Remote Fan");
-
-        obj.displayFanCompany();
-        obj.displayFan();
-        obj2.displayKhaitan();
-        obj1.displayFan();
-        obj2.displayFanCompany();
+       KhaitanCompany  obj = new KhaitanCompany("Khaitan", "Remote", 2000, 2500, 500, "Electric", 3);
+       obj.displayFanCompany();
+       obj.displayFan();
+       obj.displayKhaitan();
     }
 }

@@ -5,14 +5,10 @@ public class FanCompany extends Fan {
     int price;
 
 
-    FanCompany(String companyName, String fanType, int price) {
-        super(fanType, 3); // Assuming default 3 hands for fan
+    FanCompany(String companyName, String fanType, int price, int fanHand) {
+        super(fanType, fanHand); // Assuming default 3 hands for fan
         this.companyName = companyName;
         this.price = price;
-    }
-
-    FanCompany() {
-        super();
     }
 
     void displayFanCompany() {
